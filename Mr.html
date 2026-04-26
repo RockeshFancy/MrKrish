@@ -1,7 +1,61 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>Mr Krish Saloon</title>
+
     <style>
-        
+        /* ORIGINAL STYLES (kept same, only fixed font issue) */
+        p{
+            font-family: Arial;
+            line-height: 40px;
+        }
+        .sup{
+            padding-left: 75px;
+            padding-top: 50px;
+            font-family: Arial;
+            margin-bottom: 0px;
+            font-weight: bold;
+        }
+        .main{
+            font-size: 55px;
+            color: goldenrod;
+            font-weight: bold;
+            padding-left: 75px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        .under{
+            text-decoration-line: underline;
+            opacity: 0.8;
+        }
+        .under:hover{
+            opacity: 1;
+            transition: opacity 0.15s;
+        }
+        .sub{
+            padding-left: 380px;
+            margin-top: 0px;
+        }
+        .highlight{
+            text-align: center;
+            font-weight: bold;
+            background-color: rgba(245, 242, 242, 0.839);
+            padding: 10px 20px;
+            margin: 0px 75px;
+        }
+        .high{
+            font-size: 22px;
+            color: goldenrod;
+            opacity: 0.8;
+            cursor: pointer;
+        }
+        .high:hover{
+            opacity: 1;
+            font-weight: bold;
+            transition: opacity 0.30s;
+        }
+
+        /* IMAGE STYLES */
         .men1{
             width: 300px;
             padding-top: 10px;
@@ -12,42 +66,123 @@
             padding-top: 10px;
             padding-left: 180px;
         }
-    
         .men4{
             width: 300px;
             height: 300px;
             object-fit: cover;
-            object-position: middle;
             padding-top: 10px;
             padding-left: 180px;
         }
-        
-        
-        
+
+        /* NEW SECTIONS (EXTENSION ONLY) */
+
+        /* QUOTES */
+        .quotes{
+            margin-top: 40px;
+            text-align: center;
+        }
+        .q{
+            font-style: italic;
+            color: goldenrod;
+            font-size: 20px;
+            margin: 10px;
+            opacity: 0.8;
+        }
+        .q:hover{
+            opacity: 1;
+        }
+
+        /* SERVICES */
+        .services{
+            margin-top: 40px;
+            padding-left: 75px;
+        }
+        .service-title{
+            font-size: 25px;
+            font-weight: bold;
+            color: goldenrod;
+        }
+        .services ul{
+            line-height: 30px;
+        }
+
+        /* PRODUCTS */
+        .products{
+            margin-top: 40px;
+            text-align: center;
+        }
+        .product-title{
+            font-size: 25px;
+            font-weight: bold;
+            color: goldenrod;
+        }
+        .logo{
+            width: 100px;
+            margin: 15px;
+            opacity: 0.8;
+        }
+        .logo:hover{
+            opacity: 1;
+        }
+
+        /* FOOTER */
+        .footer{
+            margin-top: 40px;
+            text-align: center;
+            background-color: black;
+            color: white;
+            padding: 15px;
+        }
     </style>
-    <head>
-        <link rel="stylesheet" href="KrishStyle.css">
-        <title>
-            Mr Krish Saloon
-        </title>
-    </head>
-        <body>
-        <p class="sup"> Mr Krish </p>
+</head>
 
-        <p class="main"> C<span class="under">elebrity St</span>ylish</p>
+<body>
 
-        <p class="sub"> Family Saloon</p>
+    <!-- ORIGINAL CONTENT -->
+    <p class="sup"> Mr Krish </p>
 
-        <p class="highlight"> Great styling happens by <span class="high">APPOINTMENT</span> </p>
-        
-     <div class="box1">
+    <p class="main"> C<span class="under">elebrity St</span>ylish</p>
+
+    <p class="sub"> Family Saloon</p>
+
+    <p class="highlight"> Great styling happens by <span class="high">APPOINTMENT</span> </p>
+    
+    <div class="box1">
         <img class="men1" src="men1.jpg">
         <img class="men2" src="men2.jpg">
         <img class="men4" src="men4.jpg">
     </div>
 
-        </body>
-    
+    <!-- NEW QUOTES -->
+    <div class="quotes">
+        <p class="q">"Your hair is the crown you never take off."</p>
+        <p class="q">"Great style begins with great confidence."</p>
+        <p class="q">"Life isn’t perfect, but your hair can be."</p>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="services">
+        <p class="service-title">Our Services</p>
+        <ul>
+            <li>Hair Cut & Styling</li>
+            <li>Beard Grooming</li>
+            <li>Hair Coloring</li>
+            <li>Facials & Skin Care</li>
+        </ul>
+    </div>
+
+    <!-- PRODUCTS -->
+    <div class="products">
+        <p class="product-title">Products We Use</p>
+        <img class="logo" src="loreal.png">
+        <img class="logo" src="garnier.png">
+        <img class="logo" src="nivea.png">
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <p>© Mr Krish Salon | All Rights Reserved</p>
+    </div>
+
+</body>
 </html>
-
-
