@@ -751,12 +751,12 @@
     <div class="about-frame">
       <div class="about-frame-inner">
         <div class="scissors-icon">✂</div>
-        <p style="font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.3em;color:var(--gold);opacity:0.6">SINCE 2023</p>
+        <p style="font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.3em;color:var(--gold);opacity:0.6">SINCE 2010</p>
       </div>
     </div>
     <div class="about-accent"></div>
     <div class="about-badge">
-      <span class="num">3+</span>
+      <span class="num">15+</span>
       <span class="lbl">Years</span>
     </div>
   </div>
@@ -769,7 +769,7 @@
     <p>Our master stylists bring together decades of expertise, international techniques, and an intuitive understanding of your unique style. Every visit is a bespoke experience tailored exclusively for you.</p>
     <div class="stats-row">
       <div class="stat"><div class="num">5000+</div><div class="lbl">Happy Clients</div></div>
-      <div class="stat"><div class="num">2+</div><div class="lbl">Expert Stylists</div></div>
+      <div class="stat"><div class="num">15+</div><div class="lbl">Expert Stylists</div></div>
       <div class="stat"><div class="num">30+</div><div class="lbl">Services</div></div>
     </div>
   </div>
@@ -892,17 +892,17 @@
       <div class="form-row">
         <div class="form-group">
           <label>Full Name</label>
-          <input type="text" placeholder="Your Name"/>
+          <input id="bk-name" type="text" placeholder="Your Name"/>
         </div>
         <div class="form-group">
           <label>Phone Number</label>
-          <input type="tel" placeholder="+91 00000 00000"/>
+          <input id="bk-phone" type="tel" placeholder="+91 00000 00000"/>
         </div>
       </div>
       <div class="form-row">
         <div class="form-group">
           <label>Select Service</label>
-          <select>
+          <select id="bk-service">
             <option>Celebrity Haircut</option>
             <option>Royal Shave</option>
             <option>Hair Spa & Therapy</option>
@@ -913,13 +913,40 @@
         </div>
         <div class="form-group">
           <label>Preferred Date</label>
-          <input type="date"/>
+          <input id="bk-date" type="date"/>
         </div>
       </div>
-      <button class="submit-btn" onclick="alert('✦ Thank you! Your royal appointment has been booked. We will contact you shortly.')">Confirm Appointment</button>
+      <button class="submit-btn" onclick="sendWhatsApp()">Confirm Appointment</button>
     </div>
   </div>
 </section>
+
+<script>
+function sendWhatsApp() {
+  const name    = document.getElementById('bk-name').value.trim();
+  const phone   = document.getElementById('bk-phone').value.trim();
+  const service = document.getElementById('bk-service').value;
+  const date    = document.getElementById('bk-date').value;
+
+  if (!name || !phone || !date) {
+    alert('✦ Please fill in your Name, Phone Number and Preferred Date to confirm your appointment.');
+    return;
+  }
+
+  const formattedDate = date ? new Date(date).toLocaleDateString('en-IN', {day:'numeric', month:'long', year:'numeric'}) : 'Not specified';
+
+  const msg =
+    `✦ *New Appointment — MR Krish Celebrity Salon* ✦\n\n` +
+    `👤 *Name:* ${name}\n` +
+    `📞 *Phone:* ${phone}\n` +
+    `✂️ *Service:* ${service}\n` +
+    `📅 *Date:* ${formattedDate}\n\n` +
+    `_Sent via MR Krish Salon website_`;
+
+  const encoded = encodeURIComponent(msg);
+  window.open(`https://wa.me/918790830157?text=${encoded}`, '_blank');
+}
+</script>
 
 <!-- FOOTER -->
 <footer>
@@ -951,11 +978,11 @@
     <div class="footer-col">
       <h4>Contact</h4>
       <ul>
-        <li>📍 Hanamkonda Chowrastha, Beside Kasam Fashion</li>
-        <li>📞 +91 98765 43210</li>
+        <li>📍 Hanamkonda Chowrastha, Beside Kasam</li>
+        <li>📞 +91 8790830157</li>
         <li>✉️ hello@mrkrishsalon.in</li>
-        <li>⏰ Wed–Mon: 9am – 8pm</li>
-        <li>⏰ Sun: 9am – 10pm</li>
+        <li>⏰ Mon–Sat: 9am – 8pm</li>
+        <li>⏰ Sun: 10am – 6pm</li>
       </ul>
     </div>
   </div>
